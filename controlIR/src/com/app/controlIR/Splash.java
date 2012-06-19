@@ -1,6 +1,7 @@
 package com.app.controlIR;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 public class Splash extends Activity{
@@ -9,5 +10,21 @@ public class Splash extends Activity{
     public void onCreate(Bundle splashInstanceState) {
         super.onCreate(splashInstanceState);
         setContentView(R.layout.splash);
+        Thread loader = new Thread(){
+        	public void run(){
+        		try{
+        			sleep(2000);
+        		}
+        		catch(InterruptedException e){
+        			e.printStackTrace();
+        		}
+        		finally{
+        			Intent intentHome = new Intent("android.intent.action.MENU");
+        			startActivity(intentHome);
+        		}
+        		
+        	}
+        };
+        loader.start();
     }
 }

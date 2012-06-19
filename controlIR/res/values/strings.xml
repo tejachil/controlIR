@@ -3,5 +3,11 @@
 
     <string name="hello">Hello World, ControlIRActivity!</string>
     <string name="app_name">controlIR</string>
-
+	<string-array name="settings_array">
+	    <item>Manage Rooms</item>
+	    <item>Manage Devices</item>
+	    <item>View Guides</item>
+	    <item>Notification</item>
+	    <item>About</item>
+	</string-array>
 </resources>
